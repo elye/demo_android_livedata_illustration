@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
     tools:context=".MutableLiveDataActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="LiveData1"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <com.elyeproj.loaderviewlibrary.LoaderTextView
+        android:id="@+id/txt_livedata1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="~nothing~"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:custom_color="#DDD"
+        app:height_weight="0.8" />
+
+    <Button
+        android:id="@+id/btn_livedata1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Generate" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="#EEE" />
+
+    <Button
+        android:id="@+id/btn_control_fragment"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Add Fragment" />
+
+</LinearLayout>
