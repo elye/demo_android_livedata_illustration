@@ -8,24 +8,28 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btn_mutable_livedata"
         android:padding="16dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Illustrate Mutable LiveData" />
 
     <Button
+        android:id="@+id/btn_transformation_map"
         android:padding="16dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Illustrate Transformation Map" />
 
     <Button
+        android:id="@+id/btn_mediator_livedata"
         android:padding="16dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text="Illustrate Mediator LiveData" />
 
     <Button
+        android:id="@+id/btn_transformation_switchmap"
         android:padding="16dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"

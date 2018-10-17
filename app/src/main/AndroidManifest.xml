@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MutableLiveDataActivity"></activity>
+        <activity android:name=".MediatorLiveDataActivity"></activity>
+        <activity android:name=".TransformationMapActivity"></activity>
+        <activity android:name=".TransformationSwitchMapActivity"></activity>
     </application>
 
 </manifest>
