@@ -29,7 +29,7 @@
         app:height_weight="0.8" />
 
     <Button
-        android:id="@+id/btn_livedata1"
+        android:id="@+id/btn_livedata_a"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -29,13 +29,11 @@ class MutableLiveDataActivity : AppCompatActivity() {
 
         liveDataA.observe(this, changeObserver)
 
-        btn_livedata1.setOnClickListener {
+        btn_livedata_a.setOnClickListener {
             txt_livedata_a.resetLoader()
             launch {
                 delay(1000)
-                liveDataA.postValue(
-                        (1..9999).random().toString()
-                                .padStart(4, '0'))
+                liveDataA.postValue((1..9999).random())
             }
         }
 

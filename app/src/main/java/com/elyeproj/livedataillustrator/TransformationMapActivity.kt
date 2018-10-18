@@ -4,7 +4,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Observer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_mutable_live_data.*
+import kotlinx.android.synthetic.main.activity_transformation_map.*
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
 
@@ -29,13 +29,11 @@ class TransformationMapActivity : AppCompatActivity() {
 
         liveDataA.observe(this, changeObserver)
 
-        btn_livedata1.setOnClickListener {
+        btn_livedata_a.setOnClickListener {
             txt_livedata_a.resetLoader()
             launch {
                 delay(1000)
-                liveDataA.postValue(
-                        (1..9999).random().toString()
-                                .padStart(4, '0'))
+                liveDataA.postValue((1..9999).random())
             }
         }
 
