@@ -4,19 +4,17 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Observer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_mutable_live_data.*
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch
 
 class MutableLiveDataActivity : AppCompatActivity() {
 
-    val liveData1 = MutableLiveData<String>()
+    val liveDataA = MutableLiveData<String>()
 
     private val changeObserver = Observer<String> { value ->
         value?.let {
-            txt_livedata1.text = it
+            txt_livedata_a.text = it
         }
     }
 
@@ -29,13 +27,13 @@ class MutableLiveDataActivity : AppCompatActivity() {
             setFragmentControlButtonText()
         }
 
-        liveData1.observe(this, changeObserver)
+        liveDataA.observe(this, changeObserver)
 
         btn_livedata1.setOnClickListener {
-            txt_livedata1.resetLoader()
+            txt_livedata_a.resetLoader()
             launch {
                 delay(1000)
-                liveData1.postValue(
+                liveDataA.postValue(
                         (1..9999).random().toString()
                                 .padStart(4, '0'))
             }

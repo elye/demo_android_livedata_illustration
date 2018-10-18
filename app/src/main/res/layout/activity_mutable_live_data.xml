@@ -12,12 +12,12 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="LiveData1"
+        android:text="LiveDataA"
         android:textAlignment="center"
         android:textSize="16sp" />
 
     <com.elyeproj.loaderviewlibrary.LoaderTextView
-        android:id="@+id/txt_livedata1"
+        android:id="@+id/txt_livedata_a"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
