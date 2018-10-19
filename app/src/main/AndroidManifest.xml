@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MutableLiveDataActivity"></activity>
-        <activity android:name=".MediatorLiveDataActivity"></activity>
-        <activity android:name=".TransformationMapActivity"></activity>
-        <activity android:name=".TransformationSwitchMapActivity"></activity>
+        <activity
+            android:name=".MutableLiveDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MediatorLiveDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransformationMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransformationSwitchMapActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
