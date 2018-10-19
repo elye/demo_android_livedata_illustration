@@ -91,7 +91,14 @@
         android:id="@+id/container"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="#EEE" />
+        android:background="#EEE">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Fragment" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_control_fragment"
