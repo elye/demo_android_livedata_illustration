@@ -1,16 +1,16 @@
 package com.elyeproj.livedataillustrator
 
-import android.arch.lifecycle.MediatorLiveData
-import android.arch.lifecycle.Observer
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.Observer
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_mutable_live_data.*
 
-class MediatorLiveDataFragment : Fragment() {
+class MediatorLiveDataFragment : androidx.fragment.app.Fragment() {
 
     private val changeObserver = Observer<String> { value ->
         value?.let {
@@ -23,7 +23,7 @@ class MediatorLiveDataFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_mediator_live_data, container, false)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         val mediatorLiveData = MediatorLiveData<String>()
         mediatorLiveData.addSource((activity as MediatorLiveDataActivity).liveDataA) { mediatorLiveData.value = "A:$it" }

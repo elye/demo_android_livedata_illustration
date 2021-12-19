@@ -1,12 +1,13 @@
 package com.elyeproj.livedataillustrator
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.Observer
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_mutable_live_data.*
-import kotlinx.coroutines.experimental.delay
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MutableLiveDataActivity : AppCompatActivity() {
 
@@ -31,7 +32,7 @@ class MutableLiveDataActivity : AppCompatActivity() {
 
         btn_livedata_a.setOnClickListener {
             txt_livedata_a.resetLoader()
-            launch {
+            MainScope().launch {
                 delay(1000)
                 liveDataA.postValue((1..9999).random())
             }
